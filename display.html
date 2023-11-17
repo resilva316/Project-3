@@ -1,0 +1,26 @@
+---
+layout: base
+pagination:
+    data: photos.xxxmtks.media
+    size: 1
+permalink: "display/{{ pagination.items[0].id }}/index.html"
+---
+
+
+{% for object in pagination.items -%}
+<header>
+    <h1>{{ object.alt }}</h1>
+</header>
+<h2>Photographer : {{ object.photographer }}</h2>
+<img src='{{ object.src.large }}'>
+{% endfor -%}
+
+
+<footer>
+    <hr />
+    <p>
+        <small>
+            <a href="https://www.pexels.com" target="_blank">Photos provided by Pexels</a>
+        </small>
+    </p>
+</footer>
