@@ -4,16 +4,14 @@ title: Home
 ---
 
 <header>
-  <h1>{{ title }}</h1>
+  <p>Thus us a placeholder</p>
+  <hr>
+  <h2>Gallery</h2>
+  <ul>
+    {% for photo in photos.xxxmtks.media -%}
+    <a href='display/{{ photo.id }}/index.html'>
+    <li style="list-style-type: none"><img src='{{ photo.src.tiny }}'></li>
+    </a>
+    {% endfor -%}
+  </ul>
 </header>
-
-<footer>
-  <hr />
-  <p>
-    <small>
-      <a href="https://www.pexels.com" target="_blank"
-        >Photos provided by Pexels</a
-      >
-    </small>
-  </p>
-</footer>

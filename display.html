@@ -1,0 +1,21 @@
+---
+title: Our Collection
+layout: base
+pagination:
+    data: photos.xxxmtks.media
+    size: 1
+permalink: "display/{{ pagination.items[0].id }}/index.html"
+---
+
+{% for object in pagination.items -%}
+<body style="background-color: {{object.avg_color}};">
+    <header>
+        <hr>
+        <h2>{{ object.alt }}</h2>
+        <figure>
+            <img src='{{ object.src.large }}'>
+            <figcaption>Photographer : {{ object.photographer }} - {{object.photographer_url}}</figcaption>
+        </figure>
+        {% endfor -%}
+    </header>
+</body>
